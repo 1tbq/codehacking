@@ -112,26 +112,24 @@
 
             </ul>
         </nav>
-        @yield('sidebar')
+
 
 
         <div class="content-wrapper">
             <div class="container-fluid">
 
-                @yield('content')
+
 
                 <div class="row">
-                    <div class="col-md-12-">
+                    <div class="col-md-8-">
 
                         <h1 class="page-title">Admin</h1>
 
-                        <div class="row">
-                            <div class="col-md-6-">
+        @yield('content')
 
-                            </div>
                         </div>
-
                     </div>
+
                 </div>
 
             </div>

@@ -1,6 +1,7 @@
 <?php
 
 namespace App;
+use App\Role;
 
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -30,8 +31,8 @@ class User extends Authenticatable
 
 
     public function role(){
-
-        return $this->belongsTo('App/Role');
+//Since PHP 5.5, the class keyword is also used for class name resolution. instead of App/Role
+        return $this->belongsTo('App\Role');
     }
 
 

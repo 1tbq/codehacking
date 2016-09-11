@@ -3,8 +3,6 @@
 @extends('layouts.index')
 
 
-@section('sidebar')
-
 
 
     <div class="row">
@@ -18,6 +16,8 @@
             <th>Id</th>
             <th>Name</th>
             <th>Email</th>
+            <th>Role</th>
+            <th>Status</th>
             <th>Created</th>
             <th>Updated</th>
 
@@ -32,16 +32,19 @@
                     <td>{{$user->id}}</td>
                     <td>{{$user->name}}</td>
                     <td>{{$user->email}}</td>
+                    <td>{{$user->role->name}}</td>
+                    <td>{{$user->is_active==1?'Acitve':'No'}}</td>
                     <td>{{$user->created_at->diffForHumans()}}</td>
                     <td>{{$user->updated_at->diffForHumans()}}</td>
                 </tr>
             @endforeach
 
-        @endif
-        @stop
-        </tbody>
-    </table>
 
+        @endif
+        @endsection
+        </tbody>
+
+    </table>
 
     </div>
     </div>
