@@ -5,8 +5,7 @@
 
 
 
-    <div class="row">
-        <div class="col-md-6">
+
 
             @section('content')
 
@@ -41,11 +40,10 @@
 
 
         @endif
-        @endsection
+
         </tbody>
 
     </table>
 
-    </div>
-    </div>
 
+@endsection

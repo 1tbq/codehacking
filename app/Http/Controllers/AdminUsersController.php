@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Photo;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
@@ -46,9 +47,29 @@ class AdminUsersController extends Controller
      */
     public function store(UserRequest $request)
     {
-        //
-        User::create($request->all());
-        return redirect('admin/users');
+
+        //below is the persisting data with the photos
+
+        $input = $request->all();
+        //if the file name exist
+        if($file= $request->file('photo_id')){
+            //create the file name with the time stamp
+            $name =time().$file->getClientOriginalExtension();
+            //move the file to image directory creat the directroy if it doesn't exists
+            $file->move('images',$name);
+            //creat a new photo in database
+            $photo = Photo::create(['file'=>$name]);
+            $input['photo_id']= $photo->id;
+
+        }
+        //to encript the password
+        $input['password']=bcrypt($request->password);
+        //if we dont have a photo in the form we can just create the input without the photo
+        User::create($input);
+
+        //below is persisting data without the photos
+//        User::create($request->all());
+//        return redirect('admin/users');
 
 //       return $request->all();
 

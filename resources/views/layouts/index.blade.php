@@ -9,7 +9,7 @@
     <meta name="author" content="">
     <meta name="theme-color" content="#3e454c">
 
-    <title>Harmony - Free responsive Bootstrap admin template by Themestruck.com</title>
+    <title>Laravel Example Site</title>
 
     <!-- Font awesome -->
     <link rel="stylesheet" href="{{ URL::asset('css/font-awesome.min.css') }}">
@@ -64,17 +64,14 @@
                 </li>
                 <li class="ts-label">Main</li>
                 <li class="open"><a href="index.html"><i class="fa fa-dashboard"></i> Dashboard</a></li>
-                <li><a href="#"><i class="fa fa-desktop"></i> UI Elements</a>
-                    <ul>
-                        <li><a href="panels.html">Panels and Wells</a></li>
-                        <li><a href="buttons.html">Buttons</a></li>
-                        <li><a href="notifications.html">Notifications</a></li>
-                        <li><a href="typography.html">Typography</a></li>
-                        <li><a href="icon.html">Icon</a></li>
-                        <li><a href="grid.html">Grid</a></li>
-                    </ul>
-                </li>
-                <li><a href="tables.html"><i class="fa fa-table"></i> Tables</a></li>
+                {{--The way told by Edwin did not work so i had to google find the other way to make links --}}
+                {{--<li><a href="{{route('admin.users.index')}}"><i class="fa fa-desktop"></i> All Users</a></li>--}}
+
+                <li><a href="{{ action("AdminUsersController@index")}}"><i class="fa fa-desktop"></i>All Users</a></li>
+                <li><a href="{{ action("AdminUsersController@create")}}"><i class="fa fa-desktop"></i>Create User</a></li>
+
+                {{--<li><a href="{{route('admin/users/create')}}"><i class="fa fa-table"></i> Create Users</a></li>--}}
+
                 <li><a href="forms.html"><i class="fa fa-edit"></i> Forms</a></li>
                 <li><a href="charts.html"><i class="fa fa-pie-chart"></i> Charts</a></li>
                 <li><a href="#"><i class="fa fa-sitemap"></i> Multi-Level Dropdown</a>
@@ -121,14 +118,25 @@
 
 
                 <div class="row">
-                    <div class="col-md-8-">
+                    <div class="col-lg-12-">
 
-                        <h1 class="page-title">Admin</h1>
+                        <h1 class="page-title">Users</h1>
 
-        @yield('content')
+
+                        <div class="well">
+
+                            <p>
+
+                                @yield('content')
+
+                            </p>
+
+                        </div>
 
                         </div>
                     </div>
+
+
 
                 </div>
 
