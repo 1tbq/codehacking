@@ -59,6 +59,9 @@ class AdminUsersController extends Controller
             $file->move('images',$name);
             //creat a new photo in database
             $photo = Photo::create(['file'=>$name]);
+            //once we create the $photo variable we have the
+            //photo id available right away we dont need to get
+            //it like we did in native php pull out the last inserted item
             $input['photo_id']= $photo->id;
 
         }
@@ -69,7 +72,7 @@ class AdminUsersController extends Controller
 
         //below is persisting data without the photos
 //        User::create($request->all());
-//        return redirect('admin/users');
+        return redirect('admin/users');
 
 //       return $request->all();
 
