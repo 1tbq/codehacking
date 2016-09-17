@@ -45,7 +45,7 @@
             <li><a href="#">Help</a></li>
             <li><a href="#">Settings</a></li>
             <li class="ts-account">
-                <a href="#"><img src="img/ts-avatar.jpg" class="ts-avatar hidden-side" alt=""> Account <i class="fa fa-angle-down hidden-side"></i></a>
+                <a href="#"><img src="http://placehold.it/128X128" class="ts-avatar hidden-side"  alt="">{{ Auth::user()->name }} <i class="fa fa-angle-down hidden-side"></i></a>
                 <ul>
                     <li><a href="#">My Account</a></li>
                     <li><a href="#">Edit Account</a></li>

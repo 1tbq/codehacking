@@ -4,7 +4,7 @@
 
     <h1>Create Users</h1>
 
-    {!! Form::open(['method'=>'POST','action'=>'AdminUsersController@store','files'=>true])!!}
+  {{ Form::open(['method'=>'POST','action'=>'AdminUsersController@store','files'=>true])}}
 
     <div class = "form-group">
         {!!Form::label('name', 'Name')!!}
@@ -40,7 +40,7 @@
     <div class ="form-group">
         {!!Form::submit('Create User',['class'=>'btn btn-primary'])!!}
         </div>
-      <!!Form::close()!!}
+    {{ Form::close() }}
 
 
     @if (count($errors) > 0)
