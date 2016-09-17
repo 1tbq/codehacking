@@ -31,12 +31,9 @@
                 <tr>
                     <td>{{$user->id}}</td>
 
+                    <td><img height="50px" width="50px" src="{{$user->photo ? $user->photo->file:'http://placehold.it/50X50'}}"alt="" ></td>
 
-                    <td><img height="60px" src="{{$user->photo ? $user->photo->file:'no user photo'}}"alt=""></td>
-                    
-
-
-                    <td>{{$user->name}}</td>
+                    <td><a href="{{action('AdminUsersController@edit',$user->id)}}"> {{$user->name}}</a></td>
                     <td>{{$user->email}}</td>
                     <td>{{$user->role ? $user->role->name:'User has no role'}}</td>
                     <td>{{$user->is_active==1?'Acitve':'No'}}</td>
