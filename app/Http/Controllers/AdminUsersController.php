@@ -70,7 +70,7 @@ class AdminUsersController extends Controller
         //if the file name exist
         if($file= $request->file('photo_id')){
             //create the file name with the time stamp
-            $name =time().$file->getClientOriginalExtension();
+            $name =time().$file->getClientOriginalName();
             //move the file to image directory creat the directroy if it doesn't exists
             $file->move('images',$name);
             //creat a new photo in database

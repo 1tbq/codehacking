@@ -71,8 +71,10 @@
                 <li><a href="{{ action("AdminUsersController@create")}}"><i class="fa fa-desktop"></i>Create User</a></li>
 
                 {{--<li><a href="{{route('admin/users/create')}}"><i class="fa fa-table"></i> Create Users</a></li>--}}
+                <li><a href="{{ action("AdminPostsController@index")}}"><i class="fa fa-desktop"></i>Posts</a></li>
+                <li><a href="{{ action("AdminPostsController@create")}}"><i class="fa fa-desktop"></i>Create Posts</a></li>
+                {{--<li><a href="{{ action("AdminPostsController@edit")}}"><i class="fa fa-desktop"></i>Edit Posts</a></li>--}}
 
-                <li><a href="forms.html"><i class="fa fa-edit"></i> Forms</a></li>
                 <li><a href="charts.html"><i class="fa fa-pie-chart"></i> Charts</a></li>
                 <li><a href="#"><i class="fa fa-sitemap"></i> Multi-Level Dropdown</a>
                     <ul>
