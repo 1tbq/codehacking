@@ -1,6 +1,8 @@
 @extends('layouts.index')
 
 @section('content')
+    <h2>Create Posts</h2>
+
 
  <div class="row">
    {{ Form::open(['method'=>'POST','action'=>'AdminPostsController@store','files'=>true])}}
