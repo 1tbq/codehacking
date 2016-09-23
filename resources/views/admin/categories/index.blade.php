@@ -42,7 +42,8 @@
     @foreach($categories as $category)
       <tr>
         <td>{{$category->id}}</td>
-        <td>{{$category->name}}</td>
+        <td><a href="{{action('AdminCategoriesController@edit',$category->id)}}"> {{$category->name}}</a></td>
+
         <td>{{$category->created_at ? $category->created_at->diffForhumans():'no date'}}</td>
       </tr>
         @endforeach
