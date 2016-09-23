@@ -75,7 +75,8 @@
                 <li><a href="{{ action("AdminPostsController@create")}}"><i class="fa fa-desktop"></i>Create Posts</a></li>
                 {{--<li><a href="{{ action("AdminPostsController@edit")}}"><i class="fa fa-desktop"></i>Edit Posts</a></li>--}}
 
-                <li><a href="charts.html"><i class="fa fa-pie-chart"></i> Charts</a></li>
+                <li><a href="{{ action("AdminCategoriesController@index")}}"><i class="fa fa-desktop"></i>Categories</a></li>
+                <li><a href="{{ action("AdminCategoriesController@create")}}"><i class="fa fa-desktop"></i>Create Categories</a></li>
                 <li><a href="#"><i class="fa fa-sitemap"></i> Multi-Level Dropdown</a>
                     <ul>
                         <li><a href="#">2nd level</a></li>
