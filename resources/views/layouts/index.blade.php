@@ -34,6 +34,8 @@
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 
+    @yield('styles')
+
 </head>
 
 <body>
@@ -77,17 +79,9 @@
 
                 <li><a href="{{ action("AdminCategoriesController@index")}}"><i class="fa fa-desktop"></i>Categories</a></li>
                 <li><a href="{{ action("AdminCategoriesController@create")}}"><i class="fa fa-desktop"></i>Create Categories</a></li>
-                <li><a href="#"><i class="fa fa-sitemap"></i> Multi-Level Dropdown</a>
-                    <ul>
-                        <li><a href="#">2nd level</a></li>
-                        <li><a href="#">2nd level</a></li>
-                        <li><a href="#">3rd level</a>
-                            <ul>
-                                <li><a href="#">3rd level</a></li>
-                                <li><a href="#">3rd level</a></li>
-                            </ul>
-                        </li>
-                    </ul>
+                <li><a href="{{ action("AdminMediaController@index")}}"><i class="fa fa-desktop"></i> All Media</a></li>
+                <li><a href="{{ action("AdminMediaController@create")}}"><i class="fa fa-desktop"></i> Upload Media</a></li>
+
                 </li>
                 <li><a href="#"><i class="fa fa-files-o"></i> Sample Pages</a>
                     <ul>
@@ -158,7 +152,7 @@
     <script src="js/chartData.js"></script>
     <script src="js/main.js"></script>
 
-
+    @yield('scripts')
 
 
 
